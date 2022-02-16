@@ -8,11 +8,6 @@ pipeline {
                 }
             }
         }
-        stage('2') {
-             script {
-                    sh 'echo 2'
-                }
-        }
         stage('3'){
             steps {
                 script {
