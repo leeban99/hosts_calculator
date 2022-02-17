@@ -27,7 +27,7 @@ pipeline {
         stage('Run the service'){
             steps {
                 script {
-                    sh 'docker run calculate_host '
+                    sh 'docker run -p 8080:8080 calculate_host '
                 }
             }
 
