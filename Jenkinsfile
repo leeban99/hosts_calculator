@@ -5,7 +5,7 @@ pipeline {
             steps{
                   script {
                     sh 'echo inside the Build stage'
-                    mvn package
+                    sh 'mvn package'
 
                 }
             }
