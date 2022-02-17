@@ -17,6 +17,21 @@ pipeline {
                 }
             }
         }
+        stage('Build Docker image'){
+            steps {
+                script {
+                    sh 'docker build -t calculate_host'
+                }
+            }
+        }
+        stage('Run the service'){
+            steps {
+                script {
+                    sh 'docker run calculate_host'
+                }
+            }
+
+        }
         stage('Deploy'){
             steps {
                 script {
