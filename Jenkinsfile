@@ -5,7 +5,7 @@ pipeline {
             steps{
                   script {
                     sh 'echo inside the Build stage'
-                    sh 'mvn package'
+
 
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
         stage('Run the service'){
             steps {
                 script {
-                    sh 'docker run calculate_host'
+                    sh 'docker run calculate_host '
                 }
             }
 
