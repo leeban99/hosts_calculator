@@ -1,17 +1,26 @@
 pipeline {
     agent any
     stages{
-        stage('1'){
+        stage('Build'){
             steps{
                   script {
-                    sh 'echo 1'
+                    sh 'echo inside the Build stage'
+                    mvn package
+
                 }
             }
         }
-        stage('3'){
+        stage('Test'){
             steps {
                 script {
-                    sh 'echo 3'
+                    sh 'echo inside the Test stage'
+                }
+            }
+        }
+        stage('Deploy'){
+            steps {
+                script {
+                    sh 'echo inside the deploy stage'
                 }
             }
         }
