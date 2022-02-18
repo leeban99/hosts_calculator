@@ -21,14 +21,14 @@ pipeline {
         stage('Build Docker image'){
             steps {
                 script {
-                    sh 'docker build -t calculate_host .'
+                    sh 'docker build -t leeban99/calculate_host .'
                 }
             }
         }
-        stage('Run the service'){
+        stage('Push image to Dockerhub'){
             steps {
                 script {
-                    sh 'docker run -p 8080:8080 calculate_host '
+                    sh 'docker push'
                 }
             }
 
